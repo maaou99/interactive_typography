@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;  /* Remove underline */
+    color: inherit;        /* Inherit text color from parent */
+    outline: none;         /* Remove outline (focus) */
+  }
+
+html,
+body
+{
+    overflow: hidden;
+    cursor: default;
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 1px;
+    
+}
+
+button {
+    border: none;        /* Remove the border */
+    background: none;    /* Remove the background */
+    outline: none;       /* Remove the outline (focus) */
+    padding: 0;          /* Remove padding if necessary */
+    margin: 0;           /* Remove margin if necessary */
+    color:#fff;
+    cursor: pointer;
+  
+
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 100px 30px 50px 200px 150px;
+    grid-template-columns:200px 400px 200px ;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  
+}
+
+.item {
+    border: 2px solid rgb(0, 0, 0);
+    text-align: justify;
+    
+
+}
+
+
+
+
+ 
+
+.item-1, .item-3{
+    padding: 8% 25%;
+    overflow: hidden; /* Ensure the text stays within the div */
+    
+    text-align: center;
+  
+      font-size: 16px; /* Initial font size */
+    
+}
+
+.item-2{
+    padding: 7% 4%;
+    text-align: center;
+}
+
+.wavy span{
+  position: relative;
+  display: inline-block;
+  animation: animateWave 1s ease-in-out infinite;
+  animation-delay: calc(0.2s * var(--i));
+
+  
+}
+
+ 
+@keyframes animateWave {
+  0% {
+       transform: translateY(0px);
+    }
+  20% {
+    transform: translateY(-20px);
+    }
+  40%, 100%{
+    transform: translateY(0px);
+  }
+  }
+
+ 
+
+.item-4{
+    grid-column: 1/4;
+    font-size: 14px;
+    padding-left: 1%;
+    padding-top: 0.5%;
+ 
+}
+
+.item-5{
+    grid-column: 1/4;
+    font-size: 12px;
+    position: relative;
+    padding: 1% 1%;
+}
+
+ 
+
+.item-6{
+    font-size: 12px;
+    padding: 5% 4%;
+     
+   
+}
+
+#text-6 {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  line-height: 20px;
+}
+
+ 
+#text-6 > span {
+  display: inline-block;
+  transition: transform 0.2s ease, opacity 0.2s ease, visibility 0.5s;
+
+}
+
+#text-6 > span:hover {
+  transform: translateY(300px);
+  opacity: 0;
+  visibility: hidden;
+   
+}
+
+
+@keyframes fallDown {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+}
+100% {
+    transform: translateY(300px);
+    opacity: 0;
+}
+
+}
+
+
+.item-7{
+    font-size: 14px;
+    padding: 3% 3%;
+}
+
+.item-8{
+    font-size: 11px;
+    padding: 2% 1%;
+    overflow: hidden;
+}
+
+
+
+.item-9{
+    grid-column: 1/3;
+    font-size: 14px;
+    padding: 2% 3%;
+}
+
+#text-9{
+  position: relative;
+  display: inline-block;
+   
+
+}
+
+#text-9:hover{
+  animation: opacityText 3s linear forwards ease;
+}
+
+#sources{
+  position: relative;
+  margin-top:25%;
+  width: 200px;
+  font-size: 10px;
+  margin-left: 1%;
+}
+
+
+
+#scribble-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#path-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+#animated-path,#animated-path-2
+#animated-path-3,#animated-path-4,#animated-path-5,
+#animated-path-6,#animated-path-7,#animated-path-8 {
+  stroke: black; /* Stroke color */
+  stroke-width: 2;
+  fill: none;
+  stroke-dasharray: 1000; /* Set to the total length of the path */
+  stroke-dashoffset: 2000;
+  
+}
+
+#animated-path:hover{
+  animation: drawPath 0.5s linear forwards;
+}
+
+#animated-path-1:hover{
+  animation: drawPath 1s 2s linear forwards;
+}
+
+#animated-path-2:hover{
+  animation: drawPath 1s 3s linear forwards;
+}
+
+#animated-path-3:hover{
+  animation: drawPath 1s 4s linear forwards;
+}
+
+#animated-path-4:hover{
+  animation: drawPath 1s 4s linear forwards;
+}
+
+#animated-path-5:hover{
+  animation: drawPath 1s 5s linear forwards;
+}
+
+#animated-path-6:hover{
+  animation: drawPath 1s 6s linear forwards;
+}
+
+#animated-path-7:hover{
+  animation: drawPath 1s 7s linear forwards;
+}
+#animated-path-8:hover{
+  animation: drawPath 1s 8s linear forwards;
+}
+
+ 
+@keyframes drawPath {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 3000;
+  }
+}
+
+
+
+#text-1, #text-2, #text-3,#text-4, #text-8, #text-5, #text-6, #text-7, #text-9{
+    filter: blur(4px);
+}
+
+#text-7, #text-1, #text-3{
+    animation: blurAnimation 1s infinite alternate; 
+
+}
+
+#text-4 p {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;
+  letter-spacing: 2px;
+  animation: typing 4s steps(100, end);
+}
+
+
+
+ 
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+#text-5 > span{
+  transition: 1.5s;
+}
+
+ 
+
+#text-5 > span:hover{
+  filter: blur(20px);
+  opacity: 0;
+  transform: scale(3);
+  animation: jigger;
+   
+}
+
+@keyframes jiggling {
+  0%, 100% {
+    transform: translateY(0);
+}
+50% {
+    transform: translateY(-10px);
+}
+25%, 75% {
+    transform: translateX(10px);
+}
+}
+
+#text-5 > span{
+  display: inline-block;
+  animation: jiggling 0.5s ease infinite;
+}
+
+
+@keyframes blurAnimation {
+    from {
+        filter: blur(3px); /* Start with some blur */
+      }
+      to {
+        filter: blur(3px); /* End with no blur */
+      }
+    }
+
+/* Define the keyframe animation */
+@keyframes increaseSize {
+    0% {
+        transform: scale(1);
+        transform-origin: center center; /* Set the center as the origin */
+        transform: scaleX(1) scaleY(1) rotate(0deg);
+        letter-spacing: 0px;
+
+      }
+      25% {
+        transform: scale(1.5); /* Increase the size by 1.5 times */
+        transform: scaleX(0.7) scaleY(1.5) rotate(90deg);
+        letter-spacing: .5px;
+      }
+      50% {
+        transform: scale(1); /* Increase the size by 1.5 times */
+        transform: scaleX(0.5) scaleY(2) rotate(180deg);
+        letter-spacing: 1px;
+      }
+      75% {
+        transform: scale(1.5); /* Increase the size by 1.5 times */
+        transform: scaleX(0.7) scaleY(1.5) rotate(272deg);
+        letter-spacing: 1.5px;
+      }
+      100%{
+        transform: scaleX(1) scaleY(1) rotate(360deg);
+        letter-spacing: 2px;
+
+      }
+    }
+  
+
+/* Remove blur on hover */
+#text-7:hover, #text-1:hover, #text-5:hover, #text-6:hover,
+#text-3:hover, #text-2:hover, #text-4:hover, #text-8:hover,  #text-9:hover {
+    animation: none; /* Remove the animation on hover */
+    filter: blur(0); /* Remove the blur on hover */
+  }
+
+  #text-1:hover, 
+  #text-3:hover {
+    animation: increaseSize 1s forwards;
+    
+  }
+
+  #text-2 > span {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+    
+  }
+
+  /* Define the keyframe animation */
+@keyframes  distortspan {
+  0% {
+       
+ 
+      transform: scaleX(1) scaleY(1) rotate(0deg);
+      font-weight: 100;
+
+    }
+    25% {
+  
+      transform: scaleX(0.7) scaleY(1.5) rotate(90deg);
+      font-weight: 200;
+    }
+    50% {
+  
+      transform: scaleX(0.5) scaleY(2) rotate(180deg);
+      font-weight: 300;
+    }
+    75% {
+     
+      transform: scaleX(0.7) scaleY(1.5) rotate(272deg);
+      font-weight: 400;
+    }
+    100%{
+      transform: scaleX(1) scaleY(1) rotate(360deg);
+       
+
+    }
+  }
+
+  #text-2 > span:hover {
+    transform: translateY(-60px); /* Move the letter 5 pixels upward on hover */
+    color: red;
+    animation: distortspan 2s  forwards;
+    
+  }
+
+
+ 
+
+
+
+
+
